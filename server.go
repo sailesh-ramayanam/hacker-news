@@ -7,13 +7,18 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"githum.com/sailesh-ramayanam/hacker-news/graph"
-	"githum.com/sailesh-ramayanam/hacker-news/graph/generated"
+	"github.com/sailesh-ramayanam/hacker-news/dbhn"
+	"github.com/sailesh-ramayanam/hacker-news/graph"
+	"github.com/sailesh-ramayanam/hacker-news/graph/generated"
 )
 
 const defaultPort = "8080"
 
 func main() {
+	err := dbhn.ConnectToDB()
+	if err != nil {
+		log.Fatal("Could not connect to database")
+	}
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort

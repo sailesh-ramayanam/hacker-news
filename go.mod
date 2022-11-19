@@ -1,9 +1,10 @@
-module githum.com/sailesh-ramayanam/hacker-news
+module github.com/sailesh-ramayanam/hacker-news
 
 go 1.19
 
 require (
 	github.com/99designs/gqlgen v0.17.20
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/vektah/gqlparser/v2 v2.5.1
 )
 

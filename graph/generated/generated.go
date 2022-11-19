@@ -15,7 +15,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/introspection"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
-	"githum.com/sailesh-ramayanam/hacker-news/graph/model"
+	"github.com/sailesh-ramayanam/hacker-news/graph/model"
 )
 
 // region    ************************** generated!.gotpl **************************
